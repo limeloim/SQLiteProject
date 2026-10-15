@@ -27,11 +27,11 @@ func (u Gopher) speak() {
 }
 
 func main() {
-	dbPath := "gopher.db" //Это название файла, в котором будет храниться наша бд
+	dbPath := "gopher.db" //Это название файла, в котором будет храниться наша бд фв
 
 	db, err := sql.Open("sqlite", dbPath) //Подключаемся к бд Появляется обьект бд через который мы будем отправлять SQL запросы
 	if err != nil {
-		log.Fatalf("failed to open db: %v", err)
+		log.Fatalf("failed to openn db: %v", err)
 	}
 	defer db.Close() //эта строчка закроет соединение с бд после завершения работы приложения
 
@@ -128,7 +128,7 @@ func update(bd *sql.DB) { //NEN
 	var email string
 	var id int
 
-	fmt.Print("Введите id для редактирования: ")
+	fmt.Print("Введите id для редактирования: ") // ааа
 	fmt.Scan(&id)
 	fmt.Print("Введите новое имя: ")
 	fmt.Scan(&name)
